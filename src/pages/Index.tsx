@@ -82,18 +82,24 @@ const Index = () => {
       {/* NAV */}
       <nav className="border-b border-border/60 bg-[hsl(var(--navy))]">
         <div className="container flex flex-wrap items-center justify-center gap-x-8 gap-y-2 py-3">
-          {navLinks.map((l) => (
-            l === 'САНТЕХНИКА' ? (
-              <Link key={l} to="/sanitaryware" className="text-xs tracking-widest text-foreground/80 hover:text-[hsl(var(--gold))] transition-colors flex items-center gap-1">
-                {l}<Icon name="ChevronDown" size={13} />
+          {navLinks.map((l) => {
+            const routeMap: Record<string, string> = {
+              'САНТЕХНИКА': '/sanitaryware',
+              'ОСВЕЩЕНИЕ': '/lighting',
+              'МЕБЕЛЬ ДЛЯ ВАННОЙ': '/furniture',
+            };
+            const to = routeMap[l];
+            return to ? (
+              <Link key={l} to={to} className="text-xs tracking-widest text-foreground/80 hover:text-[hsl(var(--gold))] transition-colors flex items-center gap-1">
+                {l}
+                {['САНТЕХНИКА', 'ОСВЕЩЕНИЕ'].includes(l) && <Icon name="ChevronDown" size={13} />}
               </Link>
             ) : (
               <a key={l} href="#" className="text-xs tracking-widest text-foreground/80 hover:text-[hsl(var(--gold))] transition-colors flex items-center gap-1">
                 {l}
-                {l === 'ОСВЕЩЕНИЕ' && <Icon name="ChevronDown" size={13} />}
               </a>
-            )
-          ))}
+            );
+          })}
         </div>
       </nav>
 
@@ -142,8 +148,14 @@ const Index = () => {
               </span>
             </>
           );
-          return c.title === 'САНТЕХНИКА' ? (
-            <Link key={c.title} to="/sanitaryware" className="glass-card rounded-sm p-7 hover-lift cursor-pointer group">{inner}</Link>
+          const routeMap: Record<string, string> = {
+            'САНТЕХНИКА': '/sanitaryware',
+            'ОСВЕЩЕНИЕ': '/lighting',
+            'МЕБЕЛЬ ДЛЯ ВАННОЙ': '/furniture',
+          };
+          const to = routeMap[c.title];
+          return to ? (
+            <Link key={c.title} to={to} className="glass-card rounded-sm p-7 hover-lift cursor-pointer group">{inner}</Link>
           ) : (
             <div key={c.title} className="glass-card rounded-sm p-7 hover-lift cursor-pointer group">{inner}</div>
           );
