@@ -41,23 +41,93 @@ const catalog: CategoryNode[] = [
 ];
 
 const products = [
-  { name: 'Salini S-Sense', type: 'Отдельностоящая ванна', price: '249 990 ₽', cat: 'Ванны', sub: 'Из искусственного камня', icon: 'Bath' },
-  { name: 'Kaldewei Puro', type: 'Стальная ванна', price: '167 400 ₽', cat: 'Ванны', sub: 'Стальные', icon: 'Bath' },
-  { name: 'Roca Continental', type: 'Акриловая ванна', price: '54 300 ₽', cat: 'Ванны', sub: 'Акриловые', icon: 'Bath' },
-  { name: 'Villeroy & Boch Subway', type: 'Унитаз подвесной', price: '29 990 ₽', cat: 'Унитазы', sub: 'Подвесные', icon: 'CircleDot' },
-  { name: 'Gessi Inciso', type: 'Смеситель для раковины', price: '89 990 ₽', cat: 'Смесители', sub: 'Для раковины', icon: 'Droplet' },
-  { name: 'Grohe Rainshower', type: 'Душевая система', price: '79 990 ₽', cat: 'Душевая программа', sub: 'Душевые системы', icon: 'ShowerHead' },
-  { name: 'Radaway Idea', type: 'Душевая кабина', price: '84 990 ₽', cat: 'Душевые кабины', sub: 'Прямоугольные', icon: 'DoorOpen' },
-  { name: 'Ravak Blix', type: 'Душевая дверь', price: '42 500 ₽', cat: 'Душевые ограждения', sub: 'Душевые двери', icon: 'Frame' },
-  { name: 'Ideal Standard Kubo', type: 'Шторка на ванну', price: '31 900 ₽', cat: 'Душевые ограждения', sub: 'Шторки на ванну', icon: 'Frame' },
-  { name: 'Roca Malaga', type: 'Душевой поддон', price: '18 700 ₽', cat: 'Душевые поддоны', sub: 'Прямоугольные', icon: 'Square' },
-  { name: 'Geberit Duofix', type: 'Инсталляция с кнопкой', price: '38 400 ₽', cat: 'Инсталляции', sub: 'Для подвесных унитазов', icon: 'Wrench' },
-  { name: 'Roca Gap', type: 'Раковина подвесная', price: '14 200 ₽', cat: 'Раковины', sub: 'Подвесные', icon: 'Circle' },
+  // Ванны
+  { name: 'Grossman Fly GR-1104MB', type: 'Элитная ванна из искусственного камня', price: '39 840 ₽', cat: 'Ванны', sub: 'Из искусственного камня', icon: 'Bath' },
+  { name: 'Grossman Forta GR-2601B', type: 'Премиальная ванна из искусственного камня', price: '66 000 ₽', cat: 'Ванны', sub: 'Из искусственного камня', icon: 'Bath' },
+  { name: 'Allen Brau Priority 4 А 170x78', type: 'Ванна из искусственного камня', price: '96 112 ₽', cat: 'Ванны', sub: 'Из искусственного камня', icon: 'Bath' },
+  { name: 'Toto Neorest', type: 'Ванна из искусственного камня', price: '1 950 000 ₽', cat: 'Ванны', sub: 'Из искусственного камня', icon: 'Bath' },
+  { name: 'Niagara Atrio NG-A17070', type: 'Акриловая ванна', price: '10 080 ₽', cat: 'Ванны', sub: 'Акриловые', icon: 'Bath' },
+  { name: 'Allen Brau Infinity 3 170x78', type: 'Акриловая ванна', price: '118 200 ₽', cat: 'Ванны', sub: 'Акриловые', icon: 'Bath' },
+  { name: 'Allen Brau Priority 5 В 160x78', type: 'Акриловая ванна', price: '118 200 ₽', cat: 'Ванны', sub: 'Акриловые', icon: 'Bath' },
+  { name: 'Grossman Cristal GR-2203L', type: 'Ванна пристенная', price: '51 040 ₽', cat: 'Ванны', sub: 'Стальные', icon: 'Bath' },
+  { name: 'Grossman Galaxy GR-2103M', type: 'Ванна отдельностоящая', price: '43 920 ₽', cat: 'Ванны', sub: 'Стальные', icon: 'Bath' },
+  { name: 'Grossman Classic GR-2501', type: 'Ванна отдельностоящая', price: '48 240 ₽', cat: 'Ванны', sub: 'Стальные', icon: 'Bath' },
+
+  // Унитазы
+  { name: 'Grossman GR-4450bmsq', type: 'Унитаз напольный, чёрный', price: '18 400 ₽', cat: 'Унитазы', sub: 'Напольные', icon: 'CircleDot' },
+  { name: 'ssww CT2038V', type: 'Унитаз напольный 485х360х330', price: '9 100 ₽', cat: 'Унитазы', sub: 'Напольные', icon: 'CircleDot' },
+  { name: 'Ambassador Nord 133T20201', type: 'Унитаз напольный', price: '8 300 ₽', cat: 'Унитазы', sub: 'Напольные', icon: 'CircleDot' },
+  { name: 'Grossman SMART GR-5702', type: 'Унитаз подвесной', price: '58 320 ₽', cat: 'Унитазы', sub: 'Подвесные', icon: 'CircleDot' },
+  { name: 'Grossman GR-4499SQ', type: 'Унитаз подвесной', price: '9 200 ₽', cat: 'Унитазы', sub: 'Подвесные', icon: 'CircleDot' },
+  { name: 'Grossman Color GR-4411BS', type: 'Унитаз подвесной', price: '8 300 ₽', cat: 'Унитазы', sub: 'Подвесные', icon: 'CircleDot' },
+  { name: 'Grossman Style GR-4475S', type: 'Унитаз подвесной безободковый', price: '7 200 ₽', cat: 'Унитазы', sub: 'Безободковый', icon: 'CircleDot' },
+  { name: 'Grossman GR-4483SQ', type: 'Унитаз подвесной 520х360х410', price: '8 600 ₽', cat: 'Унитазы', sub: 'Безободковый', icon: 'CircleDot' },
+  { name: 'Инсталляция 901.K31.01.000 + унитаз GR-5701', type: 'Комплект с инсталляцией', price: '72 800 ₽', cat: 'Унитазы', sub: 'С инсталляцией в комплекте', icon: 'CircleDot' },
+  { name: 'Abner 103T20301R', type: 'Унитаз 545*360*330', price: '8 300 ₽', cat: 'Унитазы', sub: 'Приставные', icon: 'CircleDot' },
+  { name: 'Benefit 203T20001R', type: 'Унитаз 535*340*360', price: '5 400 ₽', cat: 'Унитазы', sub: 'Приставные', icon: 'CircleDot' },
+
+  // Раковины
+  { name: 'Allen Brau Paris 100', type: 'Раковина', price: '19 792 ₽', cat: 'Раковины', sub: 'Подвесные', icon: 'Circle' },
+  { name: 'Allen Brau 36 4.11032.31', type: 'Раковина-чаша', price: '37 832 ₽', cat: 'Раковины', sub: 'Раковина-чаша', icon: 'Circle' },
+  { name: 'Allen Brau Fantasy 45', type: 'Раковина накладная', price: '15 072 ₽', cat: 'Раковины', sub: 'Накладные', icon: 'Circle' },
+  { name: 'Allen Brau 36 4.32001.20', type: 'Раковина накладная', price: '9 648 ₽', cat: 'Раковины', sub: 'Накладные', icon: 'Circle' },
+  { name: 'Allen Brau Liberty 4.32014.20', type: 'Раковина накладная', price: '21 728 ₽', cat: 'Раковины', sub: 'Накладные', icon: 'Circle' },
+  { name: 'Allen Brau 55 4.11034.AN', type: 'Раковина накладная', price: '37 832 ₽', cat: 'Раковины', sub: 'Накладные', icon: 'Circle' },
+  { name: '"Alvaro" 60 см', type: 'Раковина над стиральной машиной', price: '10 480 ₽', cat: 'Раковины', sub: 'На стиральную машину', icon: 'Circle' },
+
+  // Смесители
+  { name: 'Raglo R01.10 для раковины', type: 'Смеситель для раковины', price: '10 339 ₽', cat: 'Смесители', sub: 'Для раковины', icon: 'Droplet' },
+  { name: 'Grossman Classic', type: 'Смеситель для раковины', price: '4 720 ₽', cat: 'Смесители', sub: 'Для раковины', icon: 'Droplet' },
+  { name: 'Grossman Galaxy 510', type: 'Смеситель для раковины', price: '4 400 ₽', cat: 'Смесители', sub: 'Для раковины', icon: 'Droplet' },
+  { name: 'Raglo R02.30 для ванны и душа', type: 'Смеситель для ванны и душа', price: '14 820 ₽', cat: 'Смесители', sub: 'Для ванны', icon: 'Droplet' },
+  { name: 'Prohanss P10.22', type: 'Смеситель для ванны и душа', price: '2 335 ₽', cat: 'Смесители', sub: 'Для ванны', icon: 'Droplet' },
+  { name: 'Raglo R20.63.33 для кухни', type: 'Смеситель для кухни', price: '18 465 ₽', cat: 'Смесители', sub: 'Для кухни', icon: 'Droplet' },
+  { name: 'Zorvan gun grey', type: 'Кухонный кран', price: '13 500 ₽', cat: 'Смесители', sub: 'Для кухни', icon: 'Droplet' },
+  { name: 'Raglo R702.7246.09', type: 'Кухонная мойка со смесителем', price: '20 400 ₽', cat: 'Смесители', sub: 'Для кухни', icon: 'Droplet' },
+  { name: 'Raglo R01.51.09 с гигиеническим душем', type: 'Смеситель с гигиеническим душем', price: '9 359 ₽', cat: 'Смесители', sub: 'Для душа', icon: 'Droplet' },
+  { name: 'Raglo R01.24.03 для ванны и душа', type: 'Комплект смесителей', price: '44 510 ₽', cat: 'Смесители', sub: 'Комплекты смесителей', icon: 'Droplet' },
+
+  // Душевая программа
+  { name: 'Raglo R01.24 для ванны и душа', type: 'Душевая система', price: '38 287 ₽', cat: 'Душевая программа', sub: 'Душевые системы', icon: 'ShowerHead' },
+  { name: 'Raglo R02.24.03', type: 'Душевая система', price: '31 503 ₽', cat: 'Душевая программа', sub: 'Душевые системы', icon: 'ShowerHead' },
+  { name: 'Zorvan премиальная', type: 'Душевая система', price: '28 000 ₽', cat: 'Душевая программа', sub: 'Душевые системы', icon: 'ShowerHead' },
+  { name: 'Grossman Cosmo 500.K35.02.210', type: 'Душевая стойка (гарнитур)', price: '12 900 ₽', cat: 'Душевая программа', sub: 'Душевые гарнитуры', icon: 'ShowerHead' },
+  { name: 'Grossman Pragma 500.K35.03.320', type: 'Душевая стойка (гарнитур)', price: '18 000 ₽', cat: 'Душевая программа', sub: 'Душевые гарнитуры', icon: 'ShowerHead' },
+  { name: 'Тропический душ встраиваемый', type: 'Верхний душ', price: '29 000 ₽', cat: 'Душевая программа', sub: 'Верхние души', icon: 'ShowerHead' },
+  { name: 'Raglo R01.51 с гигиеническим душем', type: 'Гигиенический душ', price: '10 863 ₽', cat: 'Душевая программа', sub: 'Гигиенические души', icon: 'ShowerHead' },
+  { name: 'Grossman Strong GR-S91', type: 'Сифон', price: '1 300 ₽', cat: 'Душевая программа', sub: 'Комплектующие', icon: 'ShowerHead' },
+
+  // Душевые кабины
+  { name: 'Niagara Standart ST100/80/15QR', type: 'Душевая кабина', price: '40 720 ₽', cat: 'Душевые кабины', sub: 'Прямоугольные', icon: 'DoorOpen' },
+  { name: 'Niagara Classic NG-2510', type: 'Душевая кабина', price: '37 120 ₽', cat: 'Душевые кабины', sub: 'Прямоугольные', icon: 'DoorOpen' },
+  { name: 'Niagara Classic NG-67', type: 'Душевая кабина, четверть круга', price: '28 480 ₽', cat: 'Душевые кабины', sub: 'Четверть круга', icon: 'DoorOpen' },
+  { name: 'Niagara Eco E80/40/TN/BK', type: 'Душевая кабина квадратная', price: '18 960 ₽', cat: 'Душевые кабины', sub: 'Квадратные', icon: 'DoorOpen' },
+  { name: 'Niagara Classic NG-33974', type: 'Душевая кабина асимметричная', price: '32 000 ₽', cat: 'Душевые кабины', sub: 'Асимметричные', icon: 'DoorOpen' },
+  { name: 'Niagara NG-33094-14rbkt', type: 'Душевая кабина в форме призмы', price: '33 760 ₽', cat: 'Душевые кабины', sub: 'В форме призмы', icon: 'DoorOpen' },
+  { name: 'Grossman Alba GR227', type: 'Душевая кабина премиум', price: '93 760 ₽', cat: 'Душевые кабины', sub: 'Прямоугольные', icon: 'DoorOpen' },
+
+  // Душевые ограждения
+  { name: 'Grossman Galaxy', type: 'Душевое ограждение', price: '32 560 ₽', cat: 'Душевые ограждения', sub: 'Душевые уголки', icon: 'Frame' },
+  { name: 'Niagara Eco NG-1003-14T', type: 'Душевое ограждение', price: '8 300 ₽', cat: 'Душевые ограждения', sub: 'Душевые уголки', icon: 'Frame' },
+  { name: 'Niagara Eco NG-531-80', type: 'Душевая перегородка 80х190', price: '7 500 ₽', cat: 'Душевые ограждения', sub: 'Душевые перегородки', icon: 'Frame' },
+  { name: 'Niagara Eco NG-552-90 black', type: 'Душевая перегородка', price: '8 400 ₽', cat: 'Душевые ограждения', sub: 'Душевые перегородки', icon: 'Frame' },
+
+  // Инсталляции
+  { name: '901.K31.01.000', type: 'Инсталляция для подвесного унитаза', price: '38 000 ₽', cat: 'Инсталляции', sub: 'Для подвесных унитазов', icon: 'Wrench' },
+  { name: 'Инсталляция + унитаз GR-5701', type: 'Комплект инсталляции с унитазом', price: '72 800 ₽', cat: 'Инсталляции', sub: 'Комплекты инсталляций с унитазом', icon: 'Wrench' },
+
+  // Полотенцесушители
+  { name: 'Raglo R350.16.33', type: 'Полотенцесушитель электрический', price: '30 542 ₽', cat: 'Полотенцесушители', sub: 'Электрические', icon: 'Flame' },
+  { name: 'Raglo R350.09.03', type: 'Полотенцесушитель электрический', price: '35 352 ₽', cat: 'Полотенцесушители', sub: 'Электрические', icon: 'Flame' },
+  { name: 'Raglo R350.17.09', type: 'Полотенцесушитель электрический', price: '31 925 ₽', cat: 'Полотенцесушители', sub: 'Электрические', icon: 'Flame' },
+
+  // Слив и канализация
+  { name: 'Grossman Strong GR-S91', type: 'Сифон', price: '1 300 ₽', cat: 'Слив и канализация', sub: 'Сифоны', icon: 'Filter' },
 ];
 
 const filters = [
   { title: 'Цена', items: ['до 30 000 ₽', '30 000 – 80 000 ₽', '80 000 – 150 000 ₽', 'от 150 000 ₽'] },
-  { title: 'Бренд', items: ['Grohe', 'Villeroy & Boch', 'Radaway', 'Roca', 'Kaldewei', 'Gessi', 'Geberit'] },
+  { title: 'Бренд', items: ['Grossman', 'Niagara', 'Raglo', 'Allen Brau', 'Prohanss'] },
   { title: 'Материал', items: ['Акрил', 'Сталь', 'Керамика', 'Стекло', 'Искусственный камень'] },
   { title: 'Страна', items: ['Италия', 'Германия', 'Испания', 'Польша'] },
 ];
