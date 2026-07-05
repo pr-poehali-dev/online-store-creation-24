@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Icon from '@/components/ui/icon';
 
 const HERO_IMG = 'https://cdn.poehali.dev/projects/38ed5611-118f-40d9-82d8-42708e5ee95c/files/c23d9112-ea90-4204-8f02-3044372e7f00.jpg';
@@ -82,10 +83,16 @@ const Index = () => {
       <nav className="border-b border-border/60 bg-[hsl(var(--navy))]">
         <div className="container flex flex-wrap items-center justify-center gap-x-8 gap-y-2 py-3">
           {navLinks.map((l) => (
-            <a key={l} href="#" className="text-xs tracking-widest text-foreground/80 hover:text-[hsl(var(--gold))] transition-colors flex items-center gap-1">
-              {l}
-              {['САНТЕХНИКА', 'ОСВЕЩЕНИЕ'].includes(l) && <Icon name="ChevronDown" size={13} />}
-            </a>
+            l === 'САНТЕХНИКА' ? (
+              <Link key={l} to="/sanitaryware" className="text-xs tracking-widest text-foreground/80 hover:text-[hsl(var(--gold))] transition-colors flex items-center gap-1">
+                {l}<Icon name="ChevronDown" size={13} />
+              </Link>
+            ) : (
+              <a key={l} href="#" className="text-xs tracking-widest text-foreground/80 hover:text-[hsl(var(--gold))] transition-colors flex items-center gap-1">
+                {l}
+                {l === 'ОСВЕЩЕНИЕ' && <Icon name="ChevronDown" size={13} />}
+              </a>
+            )
           ))}
         </div>
       </nav>
@@ -124,16 +131,23 @@ const Index = () => {
 
       {/* CATEGORIES */}
       <section className="container grid md:grid-cols-2 lg:grid-cols-4 gap-5 pb-16">
-        {categories.map((c) => (
-          <div key={c.title} className="glass-card rounded-sm p-7 hover-lift cursor-pointer group">
-            <Icon name={c.icon} size={34} className="text-[hsl(var(--gold))] mb-5" />
-            <h3 className="font-display tracking-widest text-lg mb-2">{c.title}</h3>
-            <p className="text-sm text-muted-foreground mb-6">{c.desc}</p>
-            <span className="flex items-center gap-2 text-sm text-[hsl(var(--gold))] group-hover:gap-3 transition-all">
-              Смотреть все <Icon name="ArrowRight" size={16} />
-            </span>
-          </div>
-        ))}
+        {categories.map((c) => {
+          const inner = (
+            <>
+              <Icon name={c.icon} size={34} className="text-[hsl(var(--gold))] mb-5" />
+              <h3 className="font-display tracking-widest text-lg mb-2">{c.title}</h3>
+              <p className="text-sm text-muted-foreground mb-6">{c.desc}</p>
+              <span className="flex items-center gap-2 text-sm text-[hsl(var(--gold))] group-hover:gap-3 transition-all">
+                Смотреть все <Icon name="ArrowRight" size={16} />
+              </span>
+            </>
+          );
+          return c.title === 'САНТЕХНИКА' ? (
+            <Link key={c.title} to="/sanitaryware" className="glass-card rounded-sm p-7 hover-lift cursor-pointer group">{inner}</Link>
+          ) : (
+            <div key={c.title} className="glass-card rounded-sm p-7 hover-lift cursor-pointer group">{inner}</div>
+          );
+        })}
       </section>
 
       {/* NEW + SALE + ADVANTAGES */}
