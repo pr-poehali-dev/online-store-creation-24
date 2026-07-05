@@ -32,16 +32,11 @@ const advantages = [
   { icon: 'Truck', title: 'Удобная доставка', desc: 'По всей России и СНГ' },
 ];
 
+const LOGO_IMG = 'https://cdn.poehali.dev/projects/38ed5611-118f-40d9-82d8-42708e5ee95c/bucket/f4b86a4b-182f-4c7c-9693-1e3f1a82701a.png';
+
 const Logo = () => (
-  <div className="flex items-center gap-3">
-    <div className="w-12 h-12 rounded-full border-2 border-[#c8ccd2] flex items-center justify-center bg-[hsl(var(--navy-deep))]">
-      <span className="font-display font-bold text-lg silver-text tracking-tighter">AB</span>
-    </div>
-    <div className="leading-none">
-      <div className="font-display text-2xl silver-text tracking-[0.15em] font-semibold">ALBABAGNO</div>
-      <div className="text-[9px] tracking-[0.35em] text-[#8a94a6] mt-1">PERFECT SANITARYWARE</div>
-      <div className="italy-line h-[2px] w-full mt-1 rounded-full" />
-    </div>
+  <div className="flex items-center gap-2">
+    <img src={LOGO_IMG} alt="ALBABAGNO" className="h-14 w-auto object-contain" />
   </div>
 );
 
@@ -87,6 +82,7 @@ const Index = () => {
               'САНТЕХНИКА': '/sanitaryware',
               'ОСВЕЩЕНИЕ': '/lighting',
               'МЕБЕЛЬ ДЛЯ ВАННОЙ': '/furniture',
+              'О КОМПАНИИ': '/about',
             };
             const to = routeMap[l];
             return to ? (
@@ -264,7 +260,8 @@ const Index = () => {
           <div>
             <h4 className="font-display tracking-widest text-sm mb-4 text-[hsl(var(--gold))]">ПОКУПАТЕЛЯМ</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              {['О компании', 'Доставка', 'Оплата', 'Возврат', 'Гарантия', 'Контакты'].map((i) => (
+              <li><Link to="/about" className="hover:text-[hsl(var(--gold))] transition-colors">О компании</Link></li>
+              {['Доставка', 'Оплата', 'Возврат', 'Гарантия', 'Контакты'].map((i) => (
                 <li key={i}><a href="#" className="hover:text-[hsl(var(--gold))] transition-colors">{i}</a></li>
               ))}
             </ul>
@@ -274,6 +271,7 @@ const Index = () => {
             <div className="space-y-3 text-sm text-muted-foreground">
               <p className="flex items-center gap-2"><Icon name="Phone" size={16} className="text-[hsl(var(--gold))]" /> +7 (495) 123-45-67</p>
               <p className="flex items-center gap-2"><Icon name="Mail" size={16} className="text-[hsl(var(--gold))]" /> info@albabagno.ru</p>
+              <p className="flex items-start gap-2"><Icon name="MapPin" size={16} className="text-[hsl(var(--gold))] mt-0.5 shrink-0" /> Москва, 41 км МКАД, строительный рынок «Мельница»</p>
               <div className="flex gap-3 pt-2">
                 {['Send', 'MessageCircle', 'Instagram'].map((ic) => (
                   <a key={ic} href="#" className="w-9 h-9 rounded-sm border border-border flex items-center justify-center hover:border-[hsl(var(--gold))] hover:text-[hsl(var(--gold))] transition-colors">

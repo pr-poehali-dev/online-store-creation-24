@@ -2,16 +2,11 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Icon from '@/components/ui/icon';
 
+const LOGO_IMG = 'https://cdn.poehali.dev/projects/38ed5611-118f-40d9-82d8-42708e5ee95c/bucket/f4b86a4b-182f-4c7c-9693-1e3f1a82701a.png';
+
 const Logo = () => (
-  <Link to="/" className="flex items-center gap-3">
-    <div className="w-12 h-12 rounded-full border-2 border-[#c8ccd2] flex items-center justify-center bg-[hsl(var(--navy-deep))]">
-      <span className="font-display font-bold text-lg silver-text tracking-tighter">AB</span>
-    </div>
-    <div className="leading-none">
-      <div className="font-display text-2xl silver-text tracking-[0.15em] font-semibold">ALBABAGNO</div>
-      <div className="text-[9px] tracking-[0.35em] text-[#8a94a6] mt-1">PERFECT SANITARYWARE</div>
-      <div className="italy-line h-[2px] w-full mt-1 rounded-full" />
-    </div>
+  <Link to="/" className="flex items-center gap-2">
+    <img src={LOGO_IMG} alt="ALBABAGNO" className="h-14 w-auto object-contain" />
   </Link>
 );
 
